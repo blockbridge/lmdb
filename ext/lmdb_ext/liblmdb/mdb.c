@@ -9118,7 +9118,7 @@ mdb_env_cthr_toggle(mdb_copy *my, int adjust)
 static int ESECT
 mdb_env_cwalk(mdb_copy *my, pgno_t *pg, int flags)
 {
-	MDB_cursor mc = {0};
+	MDB_cursor mc = {};
 	MDB_node *ni;
 	MDB_page *mo, *mp, *leaf;
 	char *buf, *ptr;
@@ -9276,7 +9276,7 @@ mdb_env_copyfd1(MDB_env *env, HANDLE fd)
 {
 	MDB_meta *mm;
 	MDB_page *mp;
-	mdb_copy my = {0};
+	mdb_copy my = {};
 	MDB_txn *txn = NULL;
 	pthread_t thr;
 	pgno_t root, new_root;
